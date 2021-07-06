@@ -60,7 +60,7 @@
         <div class="hero-background">
           <div class="container">
               <h1 class="order-txt link">Эффективные решения для вашего бизнеса</h1>
-            <button class="button order-btn" type="button">Заказать услугу</button>
+            <button class="button order-btn" type="button" data-modal-open>Заказать услугу</button>
           </div>
         </div>
       </section>
@@ -414,16 +414,19 @@
     
     <div class="modal is-hidden" id="modal" data-modal>
       <div class="modal-content" id="modal-content">  
-        <button data-modal-close type="button">close</button>
+        <button class="button modal-close" aria-label="Закрыть" data-modal-close type="button">
+          <svg class="icon" width=11 height=11>
+            <use href="./icons/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
         <form>
-          <input type="text" name="" id="">
         </form>
       </div>
     </div>
-
-    <script src="./js/index.js" type="module"></script>
     <script src="./js/modal.js" type="module"></script>
+    
     <!--Modal window-->
+  
   </body>
 </html>
       
