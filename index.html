@@ -419,7 +419,46 @@
             <use href="./icons/sprite.svg#icon-close"></use>
           </svg>
         </button>
-        <form>
+        <form class="contact-form" autocomplete="off">
+          <p class="contact-form-title">Оставьте свои данные, мы вам перезвоним</p>
+          <label class="form-field">
+            <span class="input-title">Имя</span>
+            <span class="form-input-box">
+                <input class="form-input" type="text" name="user-name">
+                <svg class="icon" width=12 height=12>
+                    <use href="./images/icons.svg#icon-modal-name"></use>
+                </svg>
+            </span>
+         </label>
+         <label class="form-field">
+           <span class="input-title">Имя</span>
+           <span class="form-input-box">
+               <input class="form-input" type="text" name="user-name">
+                <svg class="icon" width=12 height=12>
+                  <use href="./images/icons.svg#icon-modal-name"></use>
+              </svg>
+           </span>
+         </label>
+         <label class="form-field">
+           <span class="input-title">Имя</span>
+           <span class="form-input-box">
+             <input class="form-input" type="text" name="user-name">
+              <svg class="icon" width=12 height=12>
+                <use href="./images/icons.svg#icon-modal-name"></use>
+              </svg>
+           </span>
+         </label>
+         <label class="form-field agreements-checkbox">
+
+         <input class="form-checkbox visually-hidden" type="checkbox" name="user-agreement" required>
+             <svg class="icon checkbox-pointer" width=11 height=8>
+                 <use href="./images/icons.svg#icon-modal-check-pointer"></use>
+             </svg>
+          <span class="checkbox-title">Соглашаюсь с рассылкой и принимаю <a href="#"
+                class="agreements">Условия
+            договора</a></span>
+      </label>
+      <button type="submit" class="button modal-form-batton" aria-label="Отправить">Отправить</button>                            
         </form>
       </div>
     </div>

@@ -13,7 +13,12 @@
   --icon-body-grey: #AFB1B8;
   --hero-background-grey: #c4c4c4;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --modal-background: rgba(0, 0, 0, 0.2);
   --modal-close-button-border: rgba(0, 0, 0, 0.1);
+  --modal-form-input-border: rgba(33, 33, 33, 0.2);
+  --modal-form-placeholder-color: rgba(117, 117, 117, 0.5);
+  --modal-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   --hero-overlay: rgba(47, 48, 58, 0.4);
   --footer-contacts: rgba(255, 255, 255, 0.6);
   --footer-soc-icon: rgba(255, 255, 255, 0.1);
@@ -676,10 +681,12 @@ a#adr-link {
   height: 100%;
   background-color: var(--modal-background);
   opacity: 1;
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function),
+    visibility 250ms var(--timing-function);
 }
 
 .modal.is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -699,6 +706,151 @@ a#adr-link {
 
 .modal.is-hidden .modal-content {
   transform: translate(-50%, -50%) scale(0.9);
+}
+
+.contact-form{
+  position: relative;
+  height: 100%;
+}
+
+.contact-form .form-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--common-color);
+}
+
+.contact-form .form-field {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.1667;
+  letter-spacing: 0.01em;
+  color: var(--grey);
+}
+
+.contact-form .input-title {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contact-form .form-input-box {
+  display: block;
+  position: relative;
+}
+
+.form-input-box .icon {
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  transform: translate(-50%, -50%);
+  color: inherit;
+  transition: fill 250ms var(--timing-function);
+}
+
+.contact-form .form-input,
+.contact-form .textarea-input {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  color: var(--common-color);
+  border: 1px solid var(--modal-form-input-border);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms var(--timing-function);
+}
+
+.contact-form .form-input {
+  height: 40px;
+  padding-left: 42px;
+}
+.contact-form .textarea {
+  margin-bottom: 20px;
+}
+
+.contact-form .textarea-input {
+  height: 120px;
+  resize: horizontal;
+  min-width: 100%;
+}
+
+.contact-form .form-input:hover,
+.contact-form .form-input:focus,
+.contact-form .textarea-input:hover,
+.contact-form .textarea-input:focus {
+  border-color: var(--brand-blue-color);
+}
+
+.form-input:hover + .icon,
+.form-input:focus + .icon {
+  fill: var(--brand-blue-color);
+}
+.modal-form .form-input:required:focus:not(:placeholder-shown):valid {
+  border-color: var(--valid-form-input);
+}
+
+.contact-form .form-input:required:focus:not(:placeholder-shown):invalid {
+  border-color: var(--invalid-form-input);
+}
+
+.contact-form .textarea-input::placeholder {
+  color: var(--modal-form-placeholder-color);
+}
+
+.contact-form .agreements {
+  color: var(--brand-blue-color);
+  opacity: 1;
+  transition: opacity 250ms var(--timing-function);
+}
+
+.contact-form .agreements:hover,
+.contact-form .agreements:focus {
+  opacity: 0.7;
+}
+
+.contact-form-batton {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form-field.agreements-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+}
+
+.checkbox-pointer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  background-color: var(--white);
+  border: 2px solid var(--common-color);
+  box-sizing: border-box;
+  border-radius: 2px;
+  fill: var(--white);
+
+  transition: background-color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
+}
+
+.checkbox-pointer:hover,
+.form-checkbox:focus + .checkbox-pointer {
+  border-color: var(--brand-blue-color);
+}
+
+.form-checkbox:checked + .checkbox-pointer {
+  background-color: var(--brand-blue-color);
+  border-color: var(--brand-blue-color);
 }
 /* Button close*/
 .button.modal-close {
@@ -721,5 +873,11 @@ a#adr-link {
 .button.modal-close:hover,
 .button.modal-close:focus {
   fill: var(--brand-blue-color);
+}
+.contact-input{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 40px;
 }
 /* END Modal window*/
