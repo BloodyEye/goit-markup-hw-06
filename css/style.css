@@ -137,7 +137,6 @@ body {
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
-  display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
   transition: color 250ms var(--timing-function);
@@ -269,7 +268,8 @@ body {
   margin-top: 0;
 }
 
-.description-spc-work {
+.description-spc-work,
+.modal-form .checkbox-title {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
@@ -450,7 +450,8 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
-.button.order-btn {
+.button.order-btn,
+.button.modal-form-submit {
   font-weight: 700;
   line-height: 1.875;
   letter-spacing: 0.06em;
@@ -501,27 +502,6 @@ body {
   margin-right: 8px;
 }
 
-.button.modal-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  padding: 3px;
-  fill: var(--black);
-  background-color: var(--white);
-  border-radius: 50%;
-  border: 1px solid var(--modal-close-button-border);
-  transition: fill 250ms var(--timing-function);
-}
-
-.button.modal-close:hover,
-.button.modal-close:focus {
-  fill: var(--brand-blue-color);
-}
 /* -----End Main Container------ */
 
 /*-----Customer section-----*/
@@ -875,6 +855,11 @@ a#adr-link {
 .button.modal-close:focus {
   fill: var(--brand-blue-color);
 }
+
+.button.modal-form-submit {
+  margin-top: 30px;
+}
+
 .contact-input {
   display: block;
   margin: 0 auto;
