@@ -451,7 +451,8 @@ body {
   cursor: pointer;
 }
 .button.order-btn,
-.button.modal-form-submit {
+.button.modal-form-submit,
+.sub-mailing-submit-btn {
   font-weight: 700;
   line-height: 1.875;
   letter-spacing: 0.06em;
@@ -554,7 +555,7 @@ body {
 }
 .ftr-logo-adr,
 .social-network,
-.subscribe {
+.sub-mailing {
   display: flex;
   flex-direction: column;
 }
@@ -592,6 +593,13 @@ a#adr-link {
   padding-top: 12px;
   margin-bottom: 20px;
   color: var(--white);
+}
+.sub-mailing__form-input {
+  width: 360px;
+  height: 50px;
+  border: 1px solid #ffffff4d;
+  background: transparent;
+  border-radius: 4px;
 }
 
 /*PORTFOLIO Project-cars*/
@@ -754,7 +762,7 @@ a#adr-link {
 
 .modal-form .textarea-input {
   height: 120px;
-  resize: horizontal;
+  resize: none;
   min-width: 100%;
 }
 
@@ -793,13 +801,18 @@ a#adr-link {
   opacity: 0.7;
 }
 
-.modal-form-batton {
+.modal-form-submit {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+  background-color: var(--order-btn);
+  color: var(--white);
+}
 .form-field.agreements-checkbox {
   display: flex;
   align-items: center;
