@@ -410,24 +410,27 @@
             </ul>
           </div>
 
-          <div class="sub-mailing">
-            <h3 class="footer-connect">Подпишитесь на рассылку</h3>
-            <label class="sub-mailing__form">
-              <span class="form-input-box">
-                <input
-                  placeholder="E-mail"
-                  class="sub-mailing__form-input"
-                  type="email"
-                  name="user-email"
-                  autocomplete="on"
-                />
-              </span>
-            </label>
+          <div class="subscribe">
+
+            <form>
+                <label class="footer-connect" for="subscribe-email-input">Подпишитесь на рассылку</label>
+                <span class="subscribe-form-interaction">
+                    <input class="subscribe-input" type="email" name="subscribe-user-email" placeholder="E-mail"
+                        required id="subscribe-email-input">
+                    <button type="submit" class="button subscribe-button" aria-label="Подписаться">
+                        <span class="subscribe-button-title">
+                            Подписаться
+                        </span>
+
+                        <svg class="icon" width=24 height=24>
+                            <use href="./icons/sprite.svg#icon-send"></use>
+                        </svg>
+
+                    </button>
+                </span>
+            </form>
           </div>
-          <div class="sub-mailing-submit">
-            <button class="button sub-mailing-submit-btn" type="submit">Подписаться</button>
-          </div>
-        </div>
+       </div>
       </div>
     </footer>
 
